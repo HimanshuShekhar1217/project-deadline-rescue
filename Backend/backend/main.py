@@ -9,7 +9,13 @@ app = FastAPI(title=settings.app_name, version=settings.app_version)
 # Wire CORS using your lower-case config parameter
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5174"],
+    # FIXED: Added 5173 to match your actual Vite/Frontend application port
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:5174", 
+        "http://127.0.0.1:5174"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -29,4 +35,4 @@ def health_check():
 
 if __name__ == "__main__":
     # Runs your development server on localhost:8000 with auto-reload
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)

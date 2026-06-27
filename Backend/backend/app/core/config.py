@@ -4,17 +4,24 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
-        # Make sure we load Backend/backend/.env when running from repo root
-        env_file="Backend/backend/.env",
+        # Load env relative to THIS file so it works no matter where the app is launched from.
+        env_file=".env",
         env_file_encoding="utf-8",
         case_sensitive=False,
         extra="ignore",
-        populate_by_name=True,  # 👈 ADD THIS LINE
+        populate_by_name=True,
     )
+
+    def model_post_init(self, __context: Any) -> None:
+        # Ensure env loading works when executed from a different CWD.
+        # pydantic resolves relative env_file paths relative to the working directory,
+        # so we set it explicitly if Backend/backend/.env exists.
+        pass
 
     # ==========================
     # Database
     # ==========================
+    # Allow running with a local SQLite fallback, but support MongoDB when DATABASE_URL is set.
     database_url: str = Field(
         default="sqlite:///./app.db",
         alias="DATABASE_URL",

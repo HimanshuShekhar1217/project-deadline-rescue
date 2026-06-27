@@ -1,0 +1,82 @@
+# =============================
+# OS / editors
+# =============================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.swn
+*.log
+
+# VSCode
+.vscode/
+
+# =============================
+# Node / Vite / React
+# =============================
+node_modules/
+dist/
+build/
+.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional: env files (keep example committed)
+Frontend/.env
+Frontend/.env.*
+Frontend/.env.local
+Frontend/.env.production*
+Frontend/.env.development*
+
+# If you keep a root env
+.env
+.env.*
+
+# =============================
+# Python / FastAPI
+# =============================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtualenvs
+.venv/
+venv/
+ENV/
+
+env/
+
+# Type check / test caches
+.pytest_cache/
+.mypy_cache/
+
+# Unit test / coverage
+.coverage
+coverage.xml
+htmlcov/
+
+# Local DB files
+*.db
+app.db
+
+# Poetry / pipenv (in case used)
+poetry.lock
+Pipfile.lock
+
+# =============================
+# Backend (common artifacts)
+# =============================
+Backend/**/.env
+Backend/**/.env.*
+
+# Alembic migration env (optional)
+*.sqlite
+
+# =============================
+# Build artifacts elsewhere
+# =============================
+backend/**/__pycache__/
+
