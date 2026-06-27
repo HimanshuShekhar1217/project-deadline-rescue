@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Login / Authentication Component Styles
+   ========================================================================== */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #0b0f1a;
+  font-family: 'Inter', sans-serif;
+}
+
+.login-card {
+  background: #121826;
+  border: 1px solid #1f2a3f;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.brand-logo {
+  font-size: 24px;
+  color: #00d4aa;
+}
+
+.login-brand h2 {
+  color: #ffffff;
+  font-size: 22px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.login-subtitle {
+  color: #8a99ad;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  color: #b4c6ef;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input {
+  background: #192233;
+  border: 1px solid #283654;
+  border-radius: 6px;
+  padding: 12px;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #00d4aa;
+  box-shadow: 0 0 0 2px rgba(0, 212, 170, 0.15);
+}
+
+.login-btn {
+  background: #00d4aa;
+  color: #0b0f1a;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+
+.login-btn:hover {
+  background: #00b38f;
+}
+
+.login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-toggle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-toggle button {
+  background: none;
+  border: none;
+  color: #8a99ad;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-toggle button:hover {
+  color: #ffffff;
+}
+
+.login-alert {
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.login-alert.error {
+  background: rgba(255, 77, 77, 0.1);
+  border: 1px solid rgba(255, 77, 77, 0.2);
+  color: #ff4d4d;
+}
+
+.login-alert.success {
+  background: rgba(0, 212, 170, 0.1);
+  border: 1px solid rgba(0, 212, 170, 0.2);
+  color: #00d4aa;
+}
