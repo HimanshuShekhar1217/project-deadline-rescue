@@ -70,16 +70,40 @@ Pipfile.lock
 # Backend (env files)
 # =============================
 # Ignore backend env stored in Backend/backend/.env (and any other nested backend envs)
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Environment Files (Specific to your path)
 Backend/backend/.env
-Backend/**/.env
-Backend/**/.env.*
+backend/.env.local
+backend/.env.*.local
 
+# Also generic protection just in case
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
 
-# Alembic migration env (optional)
-*.sqlite
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# =============================
-# Build artifacts elsewhere
-# =============================
-backend/**/__pycache__/
+# OS files
+.DS_Store
+Thumbs.db
 
