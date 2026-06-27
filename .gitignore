@@ -67,10 +67,13 @@ poetry.lock
 Pipfile.lock
 
 # =============================
-# Backend (common artifacts)
+# Backend (env files)
 # =============================
+# Ignore backend env stored in Backend/backend/.env (and any other nested backend envs)
+Backend/backend/.env
 Backend/**/.env
 Backend/**/.env.*
+
 
 # Alembic migration env (optional)
 *.sqlite
